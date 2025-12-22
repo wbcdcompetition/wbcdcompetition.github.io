@@ -92,106 +92,227 @@
 
         <div class="tab-content">
             <div id="lp" class="tab-pane active">
-                <h3>LOGISTICS PACKING</h3>
+                <div class="track-header">
+                    <h3>Track 1: Logistics Packing Challenge</h3>
+                    <span class="robot-badge">Robot from Galaxea</span>
+                </div>
 
-                <h4>Overview</h4>
-                <ul>
-                    <li>Simulates a real-world automated logistics packing scenario.</li>
-                    <li>Focuses on robotic picking from a moving conveyor system and packing into target containers.
-                    </li>
-                    <li>Evaluates both efficiency and packing quality.</li>
-                </ul>
+                <div class="track-overview">
+                    <p>This challenge simulates a real-world automated packing scenario where the robot needs to
+                        efficiently transfer items from a moving conveyor system to designated packing containers.
+                        The task involves picking items from 10 moving bins on a conveyor belt and organizing them
+                        in a target packing bin.</p>
+                </div>
 
-                <h4>Task Description</h4>
-                <ul>
-                    <li>10 picking bins move along a conveyor belt at a controlled speed.</li>
-                    <li>Each bin contains identical items.</li>
-                    <li>Item properties (shape, size, weight) vary between different bins.</li>
-                    <li>Each bin is available for picking only within a limited time window.</li>
-                </ul>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h4>Picking Environment</h4>
+                        <ul>
+                            <li>10 picking bins move along conveyor at controlled speed</li>
+                            <li>Each bin contains identical items</li>
+                            <li>Items vary between bins (shape, size, weight)</li>
+                            <li>Time limit per bin at picking point</li>
+                            </ul>
+                    </div>
 
-                <h4>Packing Variants</h4>
-                <ul>
-                    <li><strong>Standard Version:</strong> Uses a rigid plastic container as the packing bin.</li>
-                    <li><strong>Advanced Version:</strong> Uses a cardboard box and requires proper box closure after
-                        packing.</li>
-                </ul>
-
-                <h4>Evaluation Criteria</h4>
-                <ul>
-                    <li>Total picking time for all 10 items.</li>
-                    <li>Total packing time for all 10 placements.</li>
-                    <li>Neat and tight stacking of items.</li>
-                    <li>Compliance with container height and closure requirements.</li>
-                </ul>
-            </div>
+                    <div class="content-card">
+                        <h4>Packing Options</h4>
+                        <div class="version-content">
+                            <strong>Standard Version</strong>
+                            <div class="version-image">
+                                <img src="img/plastic material box .jpg" alt="Plastic Material Box" class="box-image">
+                            </div>
+                            <p>Uses rigid plastic container as packing bin</p>
+                    
+                            <strong>Advanced Version</strong>
+                            <div class="version-image">
+                                <img src="img/cardboard box.jpg" alt="Cardboard Box" class="box-image">
+                            </div>
+                            <p>Uses cardboard box with additional box closure requirement</p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="metrics-grid">
+                        <div class="content-card">
+                            <h4>Time Efficiency</h4>
+                            <ul>
+                            <li>Total picking time (cumulative for 10 items)</li>
+                            <li>Total packing time (cumulative for 10 placements)</li>
+                            </ul>
+                    </div>
+                    <div class="content-card">
+                        <h4>Quality Standards</h4>
+                        <ul>
+                            <li>Items stacked tightly and neatly, not exceeding bin height</li>
+                            <li>For advanced version, cardboard box must be properly sealed</li>
+                            </ul>
+                            </div>
+                </div>
+                
+                <div class="content-card">
+                    <h4>Sample Test Scene</h4>
+                    <div class="image-grid">
+                        <img src="img/ex1.jpg" alt="Test Scene 1">
+                        <img src="img/ex2.jpg" alt="Test Scene 2">
+                    </div>
+                </div>
+                </div>
 
             <div id="le" class="tab-pane">
-                <h3>LAB EXPERIMENTS</h3>
+                <div class="track-header">
+                    <h3>Track 2: Life Science R&D - Lab Experiments</h3>
+                    <span class="robot-badge">Robot from AgileX Robotics</span>
+                </div>
 
-                <h4>Overview</h4>
-                <ul>
-                    <li>Focuses on robotic manipulation in life science R&amp;D laboratory environments.</li>
-                    <li>Emphasizes precision, stability, and careful handling of delicate equipment.</li>
-                </ul>
+                <div class="track-overview">
+                    <p>This challenge focuses on precise laboratory operations, including column chromatography
+                        setup and sample handling. The robot must demonstrate careful manipulation of delicate
+                        laboratory equipment through three critical stages.</p>
+                </div>
 
-                <h4>Stage 1: Column Installation</h4>
-                <ul>
-                    <li>Identify the correct silica gel column using the robot's vision system.</li>
-                    <li>Align and tighten the Luer lock connection with high precision.</li>
-                    <li>Mount the column securely on a fixed rack.</li>
-                    <li>Ensure a leak-free and stable connection.</li>
-                </ul>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h4>Stage 1: Silica Gel Column Installation</h4>
+                        <p>The robot must install a silica gel column using a Luer lock connection system with
+                            precision and care.</p>
+                        <div class="step-images">
+                            <img src="img/1-1.jpg" alt="Column Location">
+                            <p>Locate and identify correct silica gel column using vision system</p>
+                            <img src="img/1-2.jpg" alt="Column Connection">
+                            <p>Align and tighten Luer lock connection with precise control</p>
+                            <img src="img/1-3.jpg" alt="Column Placement">
+                            <p>Mount column securely on fixed rack ensuring leak-free connection</p>
+                        </div>
+                    </div>
 
-                <h4>Stage 2: Sample Tube Organization</h4>
-                <ul>
-                    <li>Transfer glass sample tubes from a random arrangement to an organized layout.</li>
-                    <li>Fill all 30 positions on the target rack.</li>
-                    <li>Arrange tubes into a precise 5 × 6 grid.</li>
-                </ul>
+                    <div class="content-card">
+                        <h4>Stage 2: Sample Tube Organization</h4>
+                        <img src="img/2-1.jpg" alt="Tube Arrangement">
+                        <ul>
+                            <li>Transfer tubes from random arrangement to organized grid</li>
+                            <li>Fill all 30 positions precisely and systematically</li>
+                            <li>Arrange glass tubes in 5×6 grid on Rack A</li>
+                            </ul>
+                    </div>
 
-                <h4>Stage 3: Selective Sample Processing</h4>
-                <ul>
-                    <li>Select and transfer specified sample tubes according to a given diagram.</li>
-                    <li>Precisely pour remaining liquid samples into a waste container.</li>
-                    <li>Avoid spillage and ensure accurate liquid handling.</li>
-                </ul>
-
-                <h4>Evaluation Criteria</h4>
-                <ul>
-                    <li>Column alignment and tightening accuracy.</li>
-                    <li>Tube placement precision.</li>
-                    <li>Sample selection correctness.</li>
-                    <li>Liquid handling stability and control.</li>
-                    <li>Task completion time and overall system reliability.</li>
-                </ul>
+                    <div class="content-card">
+                        <h4>Stage 3: Selective Sample Processing</h4>
+                        <div class="step-images">
+                            <img src="img/3-1.jpg" alt="Tube Selection">
+                            <img src="img/3-2.jpg" alt="Tube Transfer">
+                            <p>Select and transfer specified tubes based on diagram</p>
+                            <img src="img/3-3.jpg" alt="Liquid Disposal">
+                            <p>Precisely pour remaining samples into waste container</p>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <div class="metrics-grid">
+                            <div class="content-card">
+                                <h4>Technical Precision</h4>
+                        <ul>
+                            <li>Column alignment and tightening accuracy</li>
+                            <li>Tube arrangement precision</li>
+                            <li>Sample selection accuracy</li>
+                            <li>Liquid handling control</li>
+                            </ul>
+                    </div>
+                    <div class="content-card">
+                        <h4>Operational Efficiency</h4>
+                        <ul>
+                            <li>Task completion speed</li>
+                            <li>Success rate per subtask</li>
+                            <li>Error-free execution</li>
+                            <li>System reliability</li>
+                            </ul>
+                    </div>
+                    </div>
             </div>
 
             <div id="dm" class="tab-pane">
-                <h3>DEFORMABLE MANIPULATION</h3>
+                <div class="track-header">
+                    <h3>Track 3: Deformable Object Manipulation</h3>
+                    <span class="robot-badge">Robot from ARX</span>
+                </div>
+                
+                <div class="track-overview">
+                    <p>This challenge evaluates robotic manipulation of deformable objects in manufacturing and
+                        service scenarios. Using a T-shirt as the representative flexible object, teams must
+                        demonstrate sophisticated perception and control capabilities.</p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h4>Load T-shirt</h4>
+                        <p>Pick up and position the T-shirt into the workspace for manipulation.</p>
+                    </div>
 
-                <h4>Overview</h4>
-                <ul>
-                    <li>Evaluates robotic manipulation of deformable objects in manufacturing and service scenarios.
-                    </li>
-                    <li>Uses a T-shirt as the representative flexible object.</li>
-                </ul>
+                    <div class="content-card">
+                        <h4>Unload T-shirt</h4>
+                        <p>Remove the T-shirt from the workspace after manipulation is complete.</p>
+                    </div>
 
-                <h4>Task Description</h4>
-                <ul>
-                    <li>Load a T-shirt into the workspace.</li>
-                    <li>Unload the T-shirt after manipulation.</li>
-                    <li>Fold the T-shirt into a neat and consistent configuration.</li>
-                </ul>
+                    <div class="content-card">
+                        <h4>Fold T-shirt</h4>
+                        <p>Fold the T-shirt into a neat and consistent configuration.</p>
+                    </div>
+                    </div>
 
-                <h4>Core Skills Assessed</h4>
-                <ul>
-                    <li>Perception and tracking of deformable objects.</li>
-                    <li>Compliant grasping and manipulation.</li>
-                    <li>Control of object deformation and alignment.</li>
-                    <li>Consistency and quality of the final folded result.</li>
-                </ul>
-            </div>
+                <div class="content-card">
+                    <h4>Core Skills Assessed</h4>
+                    <ul>
+                        <li>Perception and tracking of deformable objects</li>
+                        <li>Compliant grasping and manipulation</li>
+                        <li>Control of object deformation and alignment</li>
+                        <li>Consistency and quality of the final folded result</li>
+                        </ul>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <!-- Evaluation Section -->
+                        <div class="evaluation-section" style="margin-top: 40px;">
+                            <h3 class="text-center mb-4">Evaluation & Scoring System</h3>
+                        
+                            <div class="content-card">
+                                <h4>Virtual Budget Allocation</h4>
+                                <p>Each team receives a fixed budget in virtual dollars. Data collection costs vary based on
+                                    teleoperation method, assuming robots are provided at no cost.</p>
+                        
+                                <div class="content-grid">
+                                    <div class="content-card">
+                                        <strong>In-Person Control</strong>
+                                        <p>Side-by-side operation, full information access</p>
+                                        <span class="rate-badge high">High Rate</span>
+                                    </div>
+                        
+                                    <div class="content-card">
+                                        <strong>Close-Distance Control</strong>
+                                        <p>Onboard sensors only, minimal latency</p>
+                                        <span class="rate-badge medium">Medium Rate</span>
+                                    </div>
+                        
+                                    <div class="content-card">
+                                        <strong>Remote Control</strong>
+                                        <p>Onboard sensors, high latency, connection issues</p>
+                                        <span class="rate-badge low">Low Rate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="content-grid" style="margin-top: 20px;">
+                                <div class="content-card">
+                                    <h4>Teleoperation Performance</h4>
+                                    <p>Quality and speed vs. human baseline</p>
+                                </div>
+                        
+                                <div class="content-card">
+                                    <h4>Learning Capability</h4>
+                                    <p>Data collection efficiency and model performance</p>
+                                </div>
+                            </div>
+                        </div>
         </div>
 
 

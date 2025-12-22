@@ -3597,3 +3597,141 @@ body.competition-page {
     height: 140px;
   }
 }
+
+/*----------------------------------------------------------------
+# Track Awards Cards
+--------------------------------------------------------------*/
+.tracks-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.track-awards-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.track-awards-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.track-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px 25px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.track-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #151515;
+}
+
+
+.track-prizes {
+  padding: 20px 25px;
+}
+
+.prize-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.prize-item:hover {
+  background: rgba(255, 196, 81, 0.05);
+}
+
+.prize-item.gold {
+  border-left: 4px solid #ffd700;
+}
+
+.prize-item.silver {
+  border-left: 4px solid #c0c0c0;
+}
+
+.prize-item.bronze {
+  border-left: 4px solid #cd7f32;
+}
+
+.prize-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.prize-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prize-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #151515;
+}
+
+.prize-value {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+
+.awards-summary {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.awards-summary p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Responsive adjustments for track awards */
+@media (max-width: 768px) {
+  .tracks-awards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .track-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .prize-item {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .prize-icon {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-header {
+    padding: 15px 20px;
+  }
+
+  .track-prizes {
+    padding: 15px 20px;
+  }
+}

@@ -320,6 +320,7 @@
             document.addEventListener('DOMContentLoaded', function () {
                 const tabLinks = document.querySelectorAll('.tab-link');
                 const tabPanes = document.querySelectorAll('.tab-pane');
+                const validTabs = ['lp', 'le', 'dm'];
 
                 // Function to activate a tab
                 function activateTab(tabId) {
@@ -335,20 +336,12 @@
                     }
                 }
 
-                // Prevent browser from scrolling to hash elements
-                if (window.location.hash) {
-                    // Remove the hash from URL to prevent scrolling
-                    history.replaceState(null, null, window.location.pathname + window.location.search);
-                }
-
-                // Check URL hash on page load (but don't scroll)
+                // FIRST: Read the hash before doing anything else
                 const initialHash = window.location.hash.substring(1);
-                const validTabs = ['lp', 'le', 'dm'];
 
+                // Activate the correct tab based on hash
                 if (validTabs.includes(initialHash)) {
                     activateTab(initialHash);
-                    // Keep the hash in URL for bookmarking but prevent scrolling
-                    history.replaceState(null, null, `#${initialHash}`);
                 }
 
                 // Handle tab clicks
@@ -359,18 +352,16 @@
                         const targetTab = this.getAttribute('data-tab');
                         activateTab(targetTab);
 
-                        // Update URL hash without causing page reload or scrolling
+                        // Update URL hash without causing page reload
                         history.replaceState(null, null, `#${targetTab}`);
                     });
                 });
 
-                // Handle hash changes from external links (like from index.html)
+                // Handle hash changes from external links
                 window.addEventListener('hashchange', function() {
                     const hash = window.location.hash.substring(1);
                     if (validTabs.includes(hash)) {
                         activateTab(hash);
-                        // Scroll to top to prevent any unwanted scrolling
-                        window.scrollTo(0, 0);
                     }
                 });
             });

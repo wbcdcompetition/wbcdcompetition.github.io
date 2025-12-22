@@ -407,7 +407,7 @@ h6 {
 #hero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/hero-bg.png") top center;
+  background: url("../img/backgrounds/hero-bg.png") top center;
   background-size: cover;
   position: relative;
 }
@@ -2173,15 +2173,15 @@ img {
 
 /* Track Background Images */
 .inline-list a[data-tab="lp"] {
-  background-image: url("../img/task_ai_gen/logistics.png");
+  background-image: url("../img/tasks/track-covers/logistics.png");
 }
 
 .inline-list a[data-tab="le"] {
-  background-image: url("../img/task_ai_gen/labexp.png");
+  background-image: url("../img/tasks/track-covers/labexp.png");
 }
 
 .inline-list a[data-tab="dm"] {
-  background-image: url("../img/task_ai_gen/garmentmanip.png");
+  background-image: url("../img/tasks/track-covers/garmentmanip.png");
 }
 
 .tab-content {
@@ -2491,15 +2491,15 @@ img {
 
 /* Track Background Images */
 .inline-list a[data-tab="lp"] {
-  background-image: url("../img/task_ai_gen/logistics.png");
+  background-image: url("../img/tasks/track-covers/logistics.png");
 }
 
 .inline-list a[data-tab="le"] {
-  background-image: url("../img/task_ai_gen/labexp.png");
+  background-image: url("../img/tasks/track-covers/labexp.png");
 }
 
 .inline-list a[data-tab="dm"] {
-  background-image: url("../img/task_ai_gen/garmentmanip.png");
+  background-image: url("../img/tasks/track-covers/garmentmanip.png");
 }
 
 .tab-content {

@@ -404,6 +404,54 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/* Hero Slogan Styling */
+.hero-slogan {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffc451;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overview-tagline {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+  text-align: center;
+}
+
+
+/* Responsive slogan sizing */
+@media (max-width: 768px) {
+  .hero-slogan {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slogan {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+}
 #hero {
   width: 100%;
   min-height: 100vh;
@@ -3302,11 +3350,14 @@ body.competition-page {
 }
 
 .sponsor-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    justify-items: center;
   align-items: center;
-  gap: 40px;
+  max-width: 1000px;
+    /* Maximum 4 sponsors per row at ~200px each + gaps */
+    margin: 0 auto;
 }
 
 .sponsor-logo {
@@ -3400,6 +3451,7 @@ body.competition-page {
 /* Responsive */
 @media (max-width: 768px) {
   .sponsor-logos {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 30px;
   }
   
@@ -3426,6 +3478,7 @@ body.competition-page {
 
 @media (max-width: 480px) {
   .sponsor-logos {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
   }
   

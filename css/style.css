@@ -3169,6 +3169,7 @@ body.competition-page {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  line-clamp: 2;
   overflow: hidden;
 }
 
@@ -3788,5 +3789,291 @@ body.competition-page {
 
   .track-prizes {
     padding: 15px 20px;
+  }
+}
+/*--------------------------------------------------------------
+# WBCD 2025 Highlights Section
+---------------------------------------------------------------*/
+.wbcd-highlights-section {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.wbcd-highlights-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #151515;
+  margin-bottom: 1rem;
+}
+
+.highlights-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+/* Key Statistics Row */
+.key-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 200px;
+  flex: 1;
+  max-width: 250px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffc451;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Media Gallery with Carousel */
+.media-gallery {
+  margin-bottom: 3rem;
+}
+
+.media-gallery h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #151515;
+}
+
+.media-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-arrow {
+  background: white;
+  border: 2px solid #ffc451;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ffc451;
+  font-size: 1.2rem;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-arrow:hover {
+  background: #ffc451;
+  color: white;
+  transform: scale(1.1);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.carousel-prev {
+  margin-right: 10px;
+}
+
+.carousel-next {
+  margin-left: 10px;
+}
+
+.media-carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  flex: 1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.media-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.media-item {
+  flex: 0 0 400px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.media-item:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.media-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.media-caption {
+  padding: 1rem;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Quotes Section with Carousel */
+.quotes-section {
+  margin-bottom: 3rem;
+}
+
+.quotes-section h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #151515;
+}
+
+.quotes-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.quotes-carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  flex: 1;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.quotes-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.quote-card {
+  flex: 0 0 400px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.quote-card blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.quote-card cite {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .key-stats-row {
+    gap: 1rem;
+  }
+
+  .stat-item {
+    min-width: 150px;
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .media-item {
+    flex: 0 0 300px;
+  }
+
+  .media-item img {
+    height: 240px;
+  }
+
+  .quote-card {
+    flex: 0 0 300px;
+    padding: 1.5rem;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .carousel-prev {
+    margin-right: 5px;
+  }
+
+  .carousel-next {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .key-stats-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .media-item {
+    flex: 0 0 250px;
+  }
+
+  .quote-card {
+    flex: 0 0 250px;
   }
 }

@@ -1,0 +1,86 @@
+{
+  "configById": {
+    "3D!1": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 2.5,
+        "phi": 60,
+        "targetOffset": [0, 0, 0.5],
+        "thetaOffset": 45
+      },
+      "followTf": "world",
+      "scene": {
+        "enableStats": false,
+        "backgroundColor": "#1e293b"
+      },
+      "transforms": {
+        "showLabel": true,
+        "axisScale": 0.3
+      },
+      "topics": {
+        "/robot0/vio/eef_pose": {
+          "visible": true,
+          "color": "#10b981"
+        },
+        "/robot1/vio/eef_pose": {
+          "visible": true,
+          "color": "#f59e0b"
+        }
+      }
+    },
+    "Image!camera0": {
+      "cameraState": {
+        "distance": 1,
+        "perspective": true,
+        "phi": 0,
+        "target": [0, 0, 0],
+        "targetOffset": [0, 0, 0],
+        "targetOrientation": [0, 0, 0, 1],
+        "thetaOffset": 0
+      },
+      "cameraTopic": "/robot0/sensor/camera0",
+      "smooth": true,
+      "flipHorizontal": false,
+      "flipVertical": false
+    },
+    "Image!camera1": {
+      "cameraTopic": "/robot1/sensor/camera0",
+      "smooth": true,
+      "flipHorizontal": false,
+      "flipVertical": false
+    },
+    "Plot!tactile": {
+      "paths": [
+        { "value": "/tactile_feedback.data[0]", "enabled": true, "color": "#8b5cf6" },
+        { "value": "/tactile_feedback.data[1]", "enabled": true, "color": "#a78bfa" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "xAxisVal": "timestamp"
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "first": {
+      "first": "3D!1",
+      "second": {
+        "first": "Image!camera0",
+        "second": "Image!camera1",
+        "direction": "column",
+        "splitPercentage": 50
+      },
+      "direction": "row",
+      "splitPercentage": 60
+    },
+    "second": "Plot!tactile",
+    "direction": "column",
+    "splitPercentage": 75
+  }
+}

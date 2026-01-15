@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Research Paper Aesthetic */
+:root {
+  --color-primary: #0284c7;
+  --color-primary-light: #e0f2fe;
+  --color-slate-800: #1e293b;
+  --color-slate-600: #475569;
+  --color-slate-400: #94a3b8;
+  --color-slate-100: #f1f5f9;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* Badge styles */
+.badge-genrobot {
+  @apply bg-emerald-100 text-emerald-700 border border-emerald-200;
+}
+
+.badge-lumos {
+  @apply bg-amber-100 text-amber-700 border border-amber-200;
+}
+
+.badge-dm {
+  @apply bg-violet-100 text-violet-700 border border-violet-200;
+}
+
+/* Foxglove viewer container */
+.foxglove-container {
+  @apply w-full aspect-video bg-slate-900 rounded-xl overflow-hidden shadow-2xl;
+  min-height: 500px;
+}
+
+.foxglove-container iframe {
+  @apply w-full h-full border-0;
+}
+
+/* Card hover effects */
+.dataset-card {
+  @apply transition-all duration-300 ease-out;
+}
+
+.dataset-card:hover {
+  @apply -translate-y-1 shadow-xl;
+}
+
+.dataset-card.active {
+  @apply ring-2 ring-brand-500 ring-offset-2;
+}

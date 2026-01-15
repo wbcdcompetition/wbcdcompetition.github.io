@@ -29,7 +29,7 @@ export default function UmiGallery() {
                 </svg>
               </a>
               <div>
-                <h1 className="text-xl font-bold">UMI Data Gallery</h1>
+                <h1 className="text-xl font-bold">WBCD Data Gallery</h1>
                 <p className="text-sm text-slate-400">WBCD 2026 Competition</p>
               </div>
             </div>
@@ -74,6 +74,7 @@ export default function UmiGallery() {
                   </span>
                 </div>
                 <p className="text-slate-600">{selectedDataset.description}</p>
+                <p className="text-sm text-amber-600 mt-2">⏳ Data files are large. Please wait a moment for the visualization to load.</p>
               </div>
 
               {/* Rerun Viewer */}

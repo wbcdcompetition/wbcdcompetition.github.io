@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>WBCD 2026 - Simulation Support</title>
+    <meta content="Simulation environments for WBCD 2026 competition" name="description">
+    <meta content="robotics, simulation, WBCD, competition" name="keywords">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Simulation Page Specific Styles */
+        .simulation-section {
+            padding: 60px 0;
+        }
+
+        .simulation-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .simulation-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #151515;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .simulation-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .sim-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sim-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .sim-card-header {
+            background: linear-gradient(135deg, #151515 0%, #2d2d2d 100%);
+            padding: 20px 25px;
+            color: #fff;
+        }
+
+        .sim-card-header h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sim-card-header h3 i {
+            color: #ffc451;
+        }
+
+        .sim-card-header .track-badge {
+            background: #ffc451;
+            color: #151515;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .sim-card-body {
+            padding: 25px;
+        }
+
+        .sim-card-body p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .sim-media {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+        }
+
+        .sim-media img,
+        .sim-media video {
+            width: 100%;
+            display: block;
+        }
+
+        .sim-media-caption {
+            padding: 10px 15px;
+            background: #f8f9fa;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .sim-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .sim-features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #444;
+        }
+
+        .sim-features li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #ffc451;
+        }
+
+        .repo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #151515 0%, #2d2d2d 100%);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .repo-link:hover {
+            background: linear-gradient(135deg, #ffc451 0%, #ffb020 100%);
+            color: #151515;
+            transform: translateY(-2px);
+        }
+
+        .repo-link i {
+            font-size: 20px;
+        }
+
+        .coming-soon-note {
+            background: linear-gradient(135deg, #fff5db 0%, #fff9e6 100%);
+            border-left: 4px solid #ffc451;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .coming-soon-note strong {
+            color: #151515;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffc451;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #ffb020;
+        }
+    </style>
+</head>
+
+<body class="competition-page">
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-lg-between">
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#about">Overview</a></li>
+                    <li class="dropdown"><a href="competition-tracks.html"><span>Competition</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="competition-tracks.html#lp">LOGISTICS PACKING</a></li>
+                            <li><a href="competition-tracks.html#le">LAB EXPERIMENT</a></li>
+                            <li><a href="competition-tracks.html#dm">DEFORMABLE MANIPULATION</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="index.html#schedule">Schedule</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#funding">Awards</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#sponsors">Sponsors</a></li>
+                    <li><a class="nav-link scrollto" href="index.html#team">Organizers</a></li>
+                    <li><a class="nav-link" href="umi-gallery-dist/">Data</a></li>
+                    <li><a class="nav-link active" href="simulation.html">Simulation</a></li>
+                    <li><a class="nav-link scrollto" href="https://wbcdcompetition.github.io/2025/index.html">WBCD
+                            2025</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+        <div class="container" style="margin-top: 100px;">
+            
+            <a href="index.html#tasks" class="back-link">
+                <i class="bi bi-arrow-left"></i> Back to Competition Tracks
+            </a>
+
+            <section class="simulation-section">
+                <div class="simulation-header" data-aos="fade-up">
+                    <h2>Simulation Support</h2>
+                    <p>We are building simulation environments to help teams prepare for the competition. 
+                       These are early-stage tools developed by organizers and community volunteers — 
+                       we welcome contributions and feedback to make them better together!</p>
+                </div>
+
+                <div class="row">
+                    <!-- Rigid Body Simulation Card -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="sim-card">
+                            <div class="sim-card-header">
+                                <h3>
+                                    <i class="bi bi-box-seam"></i>
+                                    Rigid Body Simulation
+                                    <span class="track-badge">Logistics and Lab Experiments Tracks</span>
+                                </h3>
+                            </div>
+                            <div class="sim-card-body">
+                                <p>Based on the RoboTwin Platform, this is an early simulation environment for 
+                                   practicing rigid object manipulation. Currently supports the Logistics Packing task, 
+                                   with Lab Experiments support planned for future development.</p>
+                                
+                                <div class="sim-media">
+                                    <img src="img/simulation/packing_task.gif" alt="RoboTwin Packing Task Simulation">
+                                    <div class="sim-media-caption">Demonstration of the packing task in RoboTwin simulation</div>
+                                </div>
+
+                                <ul class="sim-features">
+                                    <li>Physics simulation with Vulkan rendering</li>
+                                    <li>Basic task scenarios for the packing task</li>
+                                    <li>Data collection and policy training support</li>
+                                    <li>Lab Experiments task (Track 2) — coming soon</li>
+                                </ul>
+
+                                <a href="https://github.com/RoboTwin-Platform/RoboTwin/tree/WBCD-2026" class="repo-link" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deformable Object Simulation Card -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="sim-card">
+                            <div class="sim-card-header">
+                                <h3>
+                                    <i class="bi bi-layers"></i>
+                                    Deformable Object Simulation
+                                    <span class="track-badge">Deformable Manipulation Track</span>
+                                </h3>
+                            </div>
+                            <div class="sim-card-body">
+                                <p>An early simulation environment for cloth manipulation tasks, built on 
+                                   NVIDIA Newton (currently in beta). Supports basic cloth-robot interactions for 
+                                   experimenting with deformable object handling.</p>
+                                
+                                <div class="sim-media">
+                                    <video autoplay loop muted playsinline>
+                                        <source src="img/simulation/cloth.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div class="sim-media-caption">WBCD deformable manipulation task demonstration</div>
+                                </div>
+
+                                <ul class="sim-features">
+                                    <li>NVIDIA Newton physics engine (beta)</li>
+                                    <li>Basic cloth-robot contact simulation</li>
+                                    <li>Work in progress — contributions welcome!</li>
+                                </ul>
+
+                                <a href="https://github.com/kywind/cloth_sim" class="repo-link" target="_blank">
+                                    <i class="bi bi-github"></i>
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coming-soon-note" data-aos="fade-up" data-aos-delay="300">
+                    <strong>🤝 Help Us Improve!</strong><br>
+                    These simulation environments are community-driven efforts by organizers and volunteers. 
+                    If you're interested in contributing or have suggestions, please open issues or pull requests on the GitHub repos. 
+                    Let's build better tools together!
+                </div>
+            </section>
+        </div>
+    </main><!-- End #main -->
+
+    <!-- Vendor JS Files -->
+    <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

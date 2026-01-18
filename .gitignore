@@ -40,6 +40,9 @@ umi-gallery/.venv
 umi-gallery/node_modules/
 umi-gallery/dist/
 
-# Large data files (host separately or use CDN)
-umi-gallery/public/mcap/
+# Generated output files (synced to umi-gallery-dist for deployment)
 umi-gallery/public/rrd/
+
+# Source data files for RRD generation (tracked via Git LFS)
+# umi-gallery/source-data/mcap/  - Genrobot MCAP source
+# umi-gallery/source-data/lerobot-data/  - DM LeRobot source

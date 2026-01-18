@@ -1,6 +1,6 @@
 // DATASETS Configuration
 // Data source: Genrobot's 10Kh-RealOmin-OpenData (https://huggingface.co/datasets/genrobot2025/10Kh-RealOmin-OpenData)
-// DM Robot and Lumos data coming soon for WBCD 2026 competition
+// DM Robot data now available for WBCD 2026 competition
 
 export const DATASETS = [
   {
@@ -28,15 +28,15 @@ export const DATASETS = [
     },
   },
   {
-    id: 'genrobot-3',
-    name: 'Zip Clothes',
-    source: 'Genrobot',
-    description: 'Precision zipping task with deformable garment handling',
-    thumbnail: './thumbnails/zip_clothes.jpg',
-    rrdUrl: './rrd/zip_clothes.rrd',
+    id: 'dm-insert-1',
+    name: 'Memory Cube Insert',
+    source: 'DM Robot',
+    description: 'Precision insertion task with 8-DOF arm and tactile sensing (DM Robotics)',
+    thumbnail: './thumbnails/dm_insert_episode_0.jpg',
+    rrdUrl: './rrd/dm_insert_episode_0.rrd',
     topics: {
-      transforms: ['/robot0/vio/eef_pose', '/robot1/vio/eef_pose'],
-      cameras: ['/robot0/sensor/camera0', '/robot1/sensor/camera0'],
+      cameras: ['/cameras/top', '/cameras/wrist', '/cameras/tactile'],
+      scalars: ['/observation/state', '/action'],
     },
   },
 ];
@@ -45,5 +45,5 @@ export const DATASETS = [
 export const DATA_SOURCE = {
   name: 'Genrobot 10Kh-RealOmin-OpenData',
   url: 'https://huggingface.co/datasets/genrobot2025/10Kh-RealOmin-OpenData',
-  note: 'Additional data from DM Robot and Lumos coming soon for WBCD 2026 competition.',
+  note: 'Additional data from Lumos coming soon for WBCD 2026 competition.',
 };

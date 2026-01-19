@@ -81,5 +81,5 @@ export const DATASETS = [
 export const DATA_SOURCE = {
   name: 'Genrobot 10Kh-RealOmin-OpenData',
   url: 'https://huggingface.co/datasets/genrobot2025/10Kh-RealOmin-OpenData',
-  note: 'Featuring data from Genrobot and Lumos for WBCD 2026 competition.',
+  note: 'Featuring data from Genrobot, DM Robot and Lumos for WBCD 2026 competition.',
 };

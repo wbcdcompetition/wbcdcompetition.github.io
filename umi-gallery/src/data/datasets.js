@@ -39,6 +39,18 @@ export const DATASETS = [
       scalars: ['/observation/state', '/action'],
     },
   },
+  {
+    id: 'dm-tacexo-1',
+    name: 'Fold Towels (TacExo)',
+    source: 'DM Robot',
+    description: 'Bimanual glove manipulation with thumb tactile sensing (TacExo)',
+    thumbnail: './thumbnails/tacexo_fold_towels_episode_0.jpg',
+    rrdUrl: './rrd/tacexo_fold_towels_episode_0.rrd',
+    topics: {
+      cameras: ['/cameras/third_view', '/tactile/left_thumb', '/tactile/right_thumb'],
+      scalars: ['/fingers'],
+    },
+  },
 ];
 
 // Data source information

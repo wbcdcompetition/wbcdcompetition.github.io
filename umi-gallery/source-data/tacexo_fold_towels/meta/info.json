@@ -1,0 +1,716 @@
+{
+    "codebase_version": "v2.1",
+    "robot_type": "tacexo_eye_hand",
+    "total_episodes": 5,
+    "total_frames": 1904,
+    "total_tasks": 1,
+    "total_videos": 110,
+    "total_chunks": 1,
+    "chunks_size": 1000,
+    "fps": 20,
+    "splits": {
+        "train": "0:5"
+    },
+    "data_path": "data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet",
+    "video_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mp4",
+    "mov_path": "videos/chunk-{episode_chunk:03d}/{video_key}/episode_{episode_index:06d}.mov",
+    "features": {
+        "action": {
+            "dtype": "float32",
+            "shape": [
+                78
+            ],
+            "names": [
+                "main_left_eye_x",
+                "main_left_eye_y",
+                "main_left_eye_z",
+                "main_left_eye_qx",
+                "main_left_eye_qy",
+                "main_left_eye_qz",
+                "main_left_eye_qw",
+                "main_right_eye_x",
+                "main_right_eye_y",
+                "main_right_eye_z",
+                "main_right_eye_qx",
+                "main_right_eye_qy",
+                "main_right_eye_qz",
+                "main_right_eye_qw",
+                "main_left_x",
+                "main_left_y",
+                "main_left_z",
+                "main_left_qx",
+                "main_left_qy",
+                "main_left_qz",
+                "main_left_w",
+                "main_right_x",
+                "main_right_y",
+                "main_right_z",
+                "main_right_qx",
+                "main_right_qy",
+                "main_right_qz",
+                "main_right_w",
+                "main_third_x",
+                "main_third_y",
+                "main_third_z",
+                "main_third_qx",
+                "main_third_qy",
+                "main_third_qz",
+                "main_third_qw",
+                "main_head_x",
+                "main_head_y",
+                "main_head_z",
+                "main_head_qx",
+                "main_head_qy",
+                "main_head_qz",
+                "main_head_qw",
+                "main_finger0",
+                "main_finger1",
+                "main_finger2",
+                "main_finger3",
+                "main_finger4",
+                "main_finger5",
+                "main_finger6",
+                "main_finger7",
+                "main_finger8",
+                "main_finger9",
+                "main_finger10",
+                "main_finger11",
+                "main_finger12",
+                "main_finger13",
+                "main_finger14",
+                "main_finger15",
+                "main_finger16",
+                "main_finger17",
+                "main_finger18",
+                "main_finger19",
+                "main_finger20",
+                "main_finger21",
+                "main_finger22",
+                "main_finger23",
+                "main_finger24",
+                "main_finger25",
+                "main_finger26",
+                "main_finger27",
+                "main_finger28",
+                "main_finger29",
+                "main_finger30",
+                "main_finger31",
+                "main_finger32",
+                "main_finger33",
+                "main_finger34",
+                "main_finger35"
+            ]
+        },
+        "observation.state": {
+            "dtype": "float32",
+            "shape": [
+                78
+            ],
+            "names": [
+                "main_left_eye_x",
+                "main_left_eye_y",
+                "main_left_eye_z",
+                "main_left_eye_qx",
+                "main_left_eye_qy",
+                "main_left_eye_qz",
+                "main_left_eye_qw",
+                "main_right_eye_x",
+                "main_right_eye_y",
+                "main_right_eye_z",
+                "main_right_eye_qx",
+                "main_right_eye_qy",
+                "main_right_eye_qz",
+                "main_right_eye_qw",
+                "main_left_x",
+                "main_left_y",
+                "main_left_z",
+                "main_left_qx",
+                "main_left_qy",
+                "main_left_qz",
+                "main_left_w",
+                "main_right_x",
+                "main_right_y",
+                "main_right_z",
+                "main_right_qx",
+                "main_right_qy",
+                "main_right_qz",
+                "main_right_w",
+                "main_third_x",
+                "main_third_y",
+                "main_third_z",
+                "main_third_qx",
+                "main_third_qy",
+                "main_third_qz",
+                "main_third_qw",
+                "main_head_x",
+                "main_head_y",
+                "main_head_z",
+                "main_head_qx",
+                "main_head_qy",
+                "main_head_qz",
+                "main_head_qw",
+                "main_finger0",
+                "main_finger1",
+                "main_finger2",
+                "main_finger3",
+                "main_finger4",
+                "main_finger5",
+                "main_finger6",
+                "main_finger7",
+                "main_finger8",
+                "main_finger9",
+                "main_finger10",
+                "main_finger11",
+                "main_finger12",
+                "main_finger13",
+                "main_finger14",
+                "main_finger15",
+                "main_finger16",
+                "main_finger17",
+                "main_finger18",
+                "main_finger19",
+                "main_finger20",
+                "main_finger21",
+                "main_finger22",
+                "main_finger23",
+                "main_finger24",
+                "main_finger25",
+                "main_finger26",
+                "main_finger27",
+                "main_finger28",
+                "main_finger29",
+                "main_finger30",
+                "main_finger31",
+                "main_finger32",
+                "main_finger33",
+                "main_finger34",
+                "main_finger35"
+            ]
+        },
+        "observation.images.cam_third_view": {
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": null,
+            "dtype": "video"
+        },
+        "observation.depth.cam_third_view": {
+            "shape": [
+                480,
+                640,
+                1
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": null,
+            "intrinsics": {
+                "1280x720": {
+                    "fx": 691.0904541015625,
+                    "fy": 690.4093627929688,
+                    "ppx": 642.459228515625,
+                    "ppy": 353.31585693359375
+                },
+                "640x480": {
+                    "fx": 518.3178100585938,
+                    "fy": 517.8070068359375,
+                    "ppx": 321.59442138671875,
+                    "ppy": 234.98687744140625
+                },
+                "640x360": {
+                    "fx": 345.54522705078125,
+                    "fy": 345.2046813964844,
+                    "ppx": 320.7296142578125,
+                    "ppy": 176.65792846679688
+                }
+            },
+            "dtype": "depth"
+        },
+        "observation.images.cam_headset.left_frame": {
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": null,
+            "dtype": "video"
+        },
+        "observation.images.cam_headset.right_frame": {
+            "shape": [
+                480,
+                640,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": null,
+            "dtype": "video"
+        },
+        "timestamp": {
+            "dtype": "float32",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "frame_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "episode_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "task_index": {
+            "dtype": "int64",
+            "shape": [
+                1
+            ],
+            "names": null
+        },
+        "observation.deformation.cam_left_hand_indexFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.depth.cam_left_hand_indexFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                1
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 1,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "depth"
+        },
+        "observation.shear.cam_left_hand_indexFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.deformation.cam_right_hand_middleFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.depth.cam_right_hand_middleFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                1
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 1,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "depth"
+        },
+        "observation.shear.cam_right_hand_middleFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.deformation.cam_right_hand_thumb_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.depth.cam_right_hand_thumb_tactile": {
+            "shape": [
+                240,
+                320,
+                1
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 1,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "depth"
+        },
+        "observation.shear.cam_right_hand_thumb_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.deformation.cam_left_hand_thumb_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.depth.cam_left_hand_thumb_tactile": {
+            "shape": [
+                240,
+                320,
+                1
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 1,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "depth"
+        },
+        "observation.shear.cam_left_hand_thumb_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.deformation.cam_right_hand_indexFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.depth.cam_right_hand_indexFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                1
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 1,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "depth"
+        },
+        "observation.shear.cam_right_hand_indexFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.deformation.cam_left_hand_middleFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        },
+        "observation.depth.cam_left_hand_middleFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                1
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 1,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "depth"
+        },
+        "observation.shear.cam_left_hand_middleFinger_tactile": {
+            "shape": [
+                240,
+                320,
+                3
+            ],
+            "names": [
+                "height",
+                "width",
+                "channels"
+            ],
+            "info": {
+                "video.fps": 30.0,
+                "video.height": 240,
+                "video.width": 320,
+                "video.channels": 3,
+                "video.codec": "ffv1",
+                "video.pix_fmt": "gbrp16le",
+                "video.is_depth_map": false,
+                "has_audio": false
+            },
+            "dtype": "tactile"
+        }
+    }
+}

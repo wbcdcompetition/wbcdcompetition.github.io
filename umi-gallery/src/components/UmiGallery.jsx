@@ -119,10 +119,7 @@ export default function UmiGallery() {
       <footer className="bg-slate-900 text-slate-400 py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm">
-            Sample data from{' '}
-            <a href={DATA_SOURCE.url} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">
-              Genrobot 10Kh-RealOmin-OpenData
-            </a>
+            This gallery is demo-use only.Sample data are collected by our sponsors on similar tasks. They will provide datasets for the competition tasks and supply data to participating teams.
           </p>
           <p className="text-xs mt-2 text-slate-500">
             {DATA_SOURCE.note}

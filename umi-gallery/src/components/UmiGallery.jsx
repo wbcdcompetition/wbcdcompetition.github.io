@@ -36,7 +36,7 @@ export default function UmiGallery() {
             <div className="hidden sm:flex items-center gap-2 text-sm text-slate-400">
               <span className="px-2 py-1 bg-emerald-900/50 text-emerald-400 rounded">Genrobot</span>
               <span className="px-2 py-1 bg-amber-900/50 text-amber-400 rounded">Lumos</span>
-              <span className="px-2 py-1 bg-violet-900/50 text-violet-400 rounded">DM Robot</span>
+              <span className="px-2 py-1 bg-violet-900/50 text-violet-400 rounded">DAIMON</span>
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@ function getSourceBadgeClass(source) {
       return 'bg-emerald-100 text-emerald-700';
     case 'Lumos':
       return 'bg-amber-100 text-amber-700';
-    case 'DM Robot':
+    case 'DAIMON':
       return 'bg-violet-100 text-violet-700';
     default:
       return 'bg-slate-100 text-slate-700';

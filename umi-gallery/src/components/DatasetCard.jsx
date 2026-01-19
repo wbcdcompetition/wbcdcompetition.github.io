@@ -88,7 +88,7 @@ function getSourceBadgeClass(source) {
       return 'bg-emerald-500/90 text-white';
     case 'Lumos':
       return 'bg-amber-500/90 text-white';
-    case 'DM Robot':
+    case 'DAIMON':
       return 'bg-violet-500/90 text-white';
     default:
       return 'bg-slate-500/90 text-white';
@@ -101,7 +101,7 @@ function getSourceGradient(source) {
       return 'bg-gradient-to-br from-emerald-400 to-emerald-600';
     case 'Lumos':
       return 'bg-gradient-to-br from-amber-400 to-amber-600';
-    case 'DM Robot':
+    case 'DAIMON':
       return 'bg-gradient-to-br from-violet-400 to-violet-600';
     default:
       return 'bg-gradient-to-br from-slate-400 to-slate-600';

@@ -51,11 +51,35 @@ export const DATASETS = [
       scalars: ['/fingers'],
     },
   },
+  {
+    id: 'lumos-task-1',
+    name: 'Object Packing: Light Bulb',
+    source: 'Lumos',
+    description: 'Bimanual manipulation task of packing a single light bulb into a small box',
+    thumbnail: './thumbnails/lumos_task1.jpg',
+    rrdUrl: './rrd/lumos_task1.rrd',
+    topics: {
+      transforms: ['world/left_hand/eef', 'world/right_hand/eef'],
+      cameras: ['world/left_hand/camera', 'world/right_hand/camera'],
+    },
+  },
+  {
+    id: 'lumos-task-2',
+    name: 'Object Packing: Cups',
+    source: 'Lumos',
+    description: 'Pack 2 water cups into a large box',
+    thumbnail: './thumbnails/lumos_task2.jpg',
+    rrdUrl: './rrd/lumos_task2.rrd',
+    topics: {
+      transforms: ['world/left_hand/eef', 'world/right_hand/eef'],
+      cameras: ['world/left_hand/camera', 'world/right_hand/camera'],
+    },
+  },
 ];
 
 // Data source information
 export const DATA_SOURCE = {
   name: 'Genrobot 10Kh-RealOmin-OpenData',
   url: 'https://huggingface.co/datasets/genrobot2025/10Kh-RealOmin-OpenData',
-  note: 'Additional data from Lumos coming soon for WBCD 2026 competition.',
+  note: 'Featuring data from Genrobot and Lumos for WBCD 2026 competition.',
 };

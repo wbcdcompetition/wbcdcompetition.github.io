@@ -35,7 +35,7 @@ export default function UmiGallery() {
             </div>
             <div className="hidden sm:flex items-center gap-2 text-sm text-slate-400">
               <span className="px-2 py-1 bg-emerald-900/50 text-emerald-400 rounded">Genrobot</span>
-              <span className="px-2 py-1 bg-slate-800/50 text-slate-500 rounded opacity-60">Lumos (coming soon)</span>
+              <span className="px-2 py-1 bg-amber-900/50 text-amber-400 rounded">Lumos</span>
               <span className="px-2 py-1 bg-violet-900/50 text-violet-400 rounded">DM Robot</span>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function UmiGallery() {
 
               {/* Rerun Viewer */}
               <div className="foxglove-container">
-                <RerunViewer 
+                <RerunViewer
                   rrdUrl={selectedDataset.rrdUrl}
                 />
               </div>

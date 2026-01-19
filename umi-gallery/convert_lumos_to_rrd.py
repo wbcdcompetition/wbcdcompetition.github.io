@@ -138,12 +138,14 @@ def convert_lumos_to_rrd(session_path: Path, output_path: Path):
     print("Conversion complete.")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage: python3 convert_lumos_to_rrd.py <session_path> <output_path>")
+    parser = argparse.ArgumentParser(description="Convert Lumos data to Rerun (.rrd) format.")
+    parser.add_argument("session_path", type=Path, help="Path to the session directory")
+    parser.add_argument("output_path", type=Path, help="Output path for the .rrd file")
+    args = parser.parse_args()
+    
+    if not args.session_path.exists():
+        print(f"Error: Session path {args.session_path} does not exist.")
         sys.exit(1)
-    
-    session_path = Path(sys.argv[1])
-    output_path = Path(sys.argv[2])
-    
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    convert_lumos_to_rrd(session_path, output_path)
+        
+    args.output_path.parent.mkdir(parents=True, exist_ok=True)
+    convert_lumos_to_rrd(args.session_path, args.output_path)

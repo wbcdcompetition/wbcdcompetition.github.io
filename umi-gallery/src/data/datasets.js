@@ -9,7 +9,7 @@ export const DATASETS = [
     source: 'Genrobot',
     description: 'Bimanual bowl cleaning task demonstrating coordinated manipulation',
     thumbnail: './thumbnails/clean_bowl.jpg',
-    rrdUrl: './rrd/clean_bowl.rrd',
+    rrdUrl: 'https://huggingface.co/datasets/ttotmoon/wbcd2026-gallery-data/resolve/main/clean_bowl.rrd',
     topics: {
       transforms: ['/robot0/vio/eef_pose', '/robot1/vio/eef_pose'],
       cameras: ['/robot0/sensor/camera0', '/robot1/sensor/camera0'],
@@ -21,7 +21,7 @@ export const DATASETS = [
     source: 'Genrobot',
     description: 'Fine manipulation task: unscrewing cap and pouring liquid',
     thumbnail: './thumbnails/unscrew_bottle_cap_and_pour.jpg',
-    rrdUrl: './rrd/unscrew_bottle_cap_and_pour.rrd',
+    rrdUrl: 'https://huggingface.co/datasets/ttotmoon/wbcd2026-gallery-data/resolve/main/unscrew_bottle_cap_and_pour.rrd',
     topics: {
       transforms: ['/robot0/vio/eef_pose', '/robot1/vio/eef_pose'],
       cameras: ['/robot0/sensor/camera0', '/robot1/sensor/camera0'],
@@ -57,7 +57,7 @@ export const DATASETS = [
     source: 'Lumos',
     description: 'Bimanual manipulation task of packing a single light bulb into a small box',
     thumbnail: './thumbnails/lumos_task1.jpg',
-    rrdUrl: './rrd/lumos_task1.rrd',
+    rrdUrl: 'https://huggingface.co/datasets/ttotmoon/wbcd2026-gallery-data/resolve/main/lumos_task1.rrd',
     topics: {
       transforms: ['world/left_hand/eef', 'world/right_hand/eef'],
       cameras: ['world/left_hand/camera', 'world/right_hand/camera'],
@@ -69,7 +69,7 @@ export const DATASETS = [
     source: 'Lumos',
     description: 'Pack 2 water cups into a large box',
     thumbnail: './thumbnails/lumos_task2.jpg',
-    rrdUrl: './rrd/lumos_task2.rrd',
+    rrdUrl: 'https://huggingface.co/datasets/ttotmoon/wbcd2026-gallery-data/resolve/main/lumos_task2.rrd',
     topics: {
       transforms: ['world/left_hand/eef', 'world/right_hand/eef'],
       cameras: ['world/left_hand/camera', 'world/right_hand/camera'],

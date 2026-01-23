@@ -28,10 +28,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          lfs: true  # Checkout Git LFS files
+          lfs: false  # Disable Git LFS to avoid quota limits
       
-      - name: Checkout LFS objects
-        run: git lfs checkout
+      # - name: Checkout LFS objects
+      #   run: git lfs checkout
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

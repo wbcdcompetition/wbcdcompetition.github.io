@@ -27,30 +27,30 @@ export const DATASETS = [
       cameras: ['/robot0/sensor/camera0', '/robot1/sensor/camera0'],
     },
   },
-  {
-    id: 'dm-insert-1',
-    name: 'Memory Cube Insert',
-    source: 'DAIMON',
-    description: 'Precision insertion task with 8-DOF arm and tactile sensing (DM Robotics)',
-    thumbnail: './thumbnails/dm_insert_episode_0.jpg',
-    rrdUrl: './rrd/dm_insert_episode_0.rrd',
-    topics: {
-      cameras: ['/cameras/top', '/cameras/wrist', '/cameras/tactile'],
-      scalars: ['/observation/state', '/action'],
-    },
-  },
-  {
-    id: 'dm-tacexo-1',
-    name: 'Fold Towels (TacExo)',
-    source: 'DAIMON',
-    description: 'Bimanual glove manipulation with thumb tactile sensing (TacExo)',
-    thumbnail: './thumbnails/tacexo_fold_towels_episode_0.jpg',
-    rrdUrl: './rrd/tacexo_fold_towels_episode_0.rrd',
-    topics: {
-      cameras: ['/cameras/third_view', '/tactile/left_thumb', '/tactile/right_thumb'],
-      scalars: ['/fingers'],
-    },
-  },
+  // {
+  //   id: 'dm-insert-1',
+  //   name: 'Memory Cube Insert',
+  //   source: 'DAIMON',
+  //   description: 'Precision insertion task with 8-DOF arm and tactile sensing (DM Robotics)',
+  //   thumbnail: './thumbnails/dm_insert_episode_0.jpg',
+  //   rrdUrl: './rrd/dm_insert_episode_0.rrd',
+  //   topics: {
+  //     cameras: ['/cameras/top', '/cameras/wrist', '/cameras/tactile'],
+  //     scalars: ['/observation/state', '/action'],
+  //   },
+  // },
+  // {
+  //   id: 'dm-tacexo-1',
+  //   name: 'Fold Towels (TacExo)',
+  //   source: 'DAIMON',
+  //   description: 'Bimanual glove manipulation with thumb tactile sensing (TacExo)',
+  //   thumbnail: './thumbnails/tacexo_fold_towels_episode_0.jpg',
+  //   rrdUrl: './rrd/tacexo_fold_towels_episode_0.rrd',
+  //   topics: {
+  //     cameras: ['/cameras/third_view', '/tactile/left_thumb', '/tactile/right_thumb'],
+  //     scalars: ['/fingers'],
+  //   },
+  // },
   {
     id: 'lumos-task-1',
     name: 'Object Packing: Light Bulb',
@@ -81,5 +81,5 @@ export const DATASETS = [
 export const DATA_SOURCE = {
   name: 'Genrobot 10Kh-RealOmin-OpenData',
   url: 'https://huggingface.co/datasets/genrobot2025/10Kh-RealOmin-OpenData',
-  note: 'Featuring data from Genrobot, DAIMON and Lumos for WBCD 2026 competition.',
+  note: 'Featuring data from Genrobot and Lumos (IO-AI and DAIMON coming soon) for WBCD 2026 competition.',
 };

@@ -2160,8 +2160,8 @@ img {
 
 .inline-list li {
   margin: 0;
-  flex: 0 0 33.33%;
-  width: 33.33%;
+  flex: 0 0 25%;
+    width: 25%;
 }
 
 .inline-list a {
@@ -2220,6 +2220,9 @@ img {
 }
 
 /* Track Background Images */
+.inline-list a[data-tab="ls"] {
+  background-image: url("../img/tasks/track-covers/logistics_sorting.jpeg");
+}
 .inline-list a[data-tab="lp"] {
   background-image: url("../img/tasks/track-covers/logistics.png");
 }
@@ -2478,8 +2481,8 @@ img {
 
 .inline-list li {
   margin: 0;
-  flex: 0 0 33.33%;
-  width: 33.33%;
+  flex: 0 0 25%;
+    width: 25%;
 }
 
 .inline-list a {
@@ -2624,7 +2627,7 @@ body.competition-page {
 
 .task-card {
   flex: 1;
-  min-width: 280px;
+  min-width: 250px;
   max-width: 380px;
   background: #fff;
   border-radius: 12px;
@@ -3404,6 +3407,7 @@ body.competition-page {
 .platinum-tier .sponsor-logo img {
   max-height: 140px;
   max-width: 200px;
+  width: 100%;
 }
 
 .platinum-tier .sponsor-name {
@@ -3659,7 +3663,7 @@ body.competition-page {
 --------------------------------------------------------------*/
 .tracks-awards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   margin-top: 40px;
   margin-bottom: 30px;

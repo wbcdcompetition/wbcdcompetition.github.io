@@ -47,6 +47,7 @@
                     <li class="dropdown"><a href="competition-tracks.html"><span>Competition</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
+                            <li><a href="competition-tracks.html#ls">LOGISTICS SORTING</a></li>
                             <li><a href="competition-tracks.html#lp">LOGISTICS PACKING</a></li>
                             <li><a href="competition-tracks.html#le">LAB EXPERIMENT</a></li>
                             <li><a href="competition-tracks.html#dm">DEFORMABLE MANIPULATION</a></li>
@@ -73,32 +74,107 @@
         <div class="tab-nav">
             <ul class="inline-list">
                 <li class="margin-btm-0">
-                    <a href="#" class="text-light-black w-300 tab-link active-challenge" data-tab="lp">
-                        <span><i class="fa fa-box"></i>Track 1#: LOGISTICS PACKING</span>
+                    <a href="#" class="text-light-black w-300 tab-link active-challenge" data-tab="ls">
+                        <span><i class="fa fa-sort"></i>Track 1#: LOGISTICS SORTING</span>
+                    </a>
+                    </li>
+                    <li class="margin-btm-0">
+                        <a href="#" class="text-light-black w-300 tab-link" data-tab="lp">
+                            <span><i class="fa fa-box"></i>Track 2#: LOGISTICS PACKING</span>
                     </a>
                 </li>
                 <li class="margin-btm-0">
                     <a href="#" class="text-light-black w-300 tab-link" data-tab="le">
-                        <span><i class="fa fa-flask"></i>Track 2#: LAB EXPERIMENTS</span>
+                        <span><i class="fa fa-flask"></i>Track 3#: LAB EXPERIMENTS</span>
                     </a>
                 </li>
                 <li class="margin-btm-0">
                     <a href="#" class="text-light-black w-300 tab-link" data-tab="dm">
-                        <span><i class="fa fa-tshirt"></i>Track 3#: DEFORMABLE MANIPULATION</span>
+                        <span><i class="fa fa-tshirt"></i>Track 4#: DEFORMABLE MANIPULATION</span>
                     </a>
                 </li>
             </ul>
         </div>
 
         <div class="tab-content">
-            <div id="lp" class="tab-pane active">
+            <div id="ls" class="tab-pane active">
                 <div class="track-header">
-                    <h3>Track 1: Logistics Packing Challenge</h3>
+                    <h3>Track 1: Logistics Sorting</h3>
+                    <span class="robot-badge">Robot from Unitree</span>
+                </div>
+            
+                <div class="track-overview">
+                    <p>Many modern tasks are now performed using both arms and hands, incorporating various
+                        human perception systems and robotic hardware. However, current research typically
+                        relies on self-designed tasks and evaluations, often overlooking critical industry metrics such as
+                        operational speed, system reliability, and cost-effectiveness. To bridge this gap between research and
+                        practical application, the competition introduces a set of standardized benchmark tasks, aiming to foster
+                        collaboration between researchers and industry professionals in developing practical solutions to real-world
+                        challenges.</p>
+                    <p>During the competition, participants may employ various methods to perform challenging maneuvers. The
+                        competition
+                        primarily evaluates the quality of task completion.</p>
+                </div>
+            
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h4>Task: Sorting in Logistics Scenarios</h4>
+                        <p>This challenge simulates a logistics scenario where robots must transfer items from high shelves (Robot
+                            in upright position), low shelves (Robot in bent position), and ground shelves (Robot in crouched
+                            position) to a transport vehicle in the unloading area within a fixed time limit. There is no limit
+                            on the number of items transferred per operation, but items must be prevented from falling to the
+                            ground.</p>
+                    </div>
+            
+                    <div class="version-content">
+                        <strong>Robot Configuration: Unitree G1</strong>
+                        <div class="version-image">
+                            <img src="img/tasks/logistics-sorting/g1.jpg" alt="Unitree G1" class="box-image">
+                        </div>
+                        <p><strong>End effectors:</strong> A pair of end effectors (clamps, three-finger or five-finger dexterous
+                            hands)</p>
+                        <p><strong>Control method:</strong> VR headset or inertial motion capture suit</p>
+                    </div>
+                </div>
+            
+                <div class="content-card mt-4">
+                    <h4>Human Demonstration</h4>
+                    <p>Sample task execution by a human operator for demonstration purposes.</p>
+                    <div class="video-container">
+                        <video width="100%" height="auto" controls>
+                            <source src="img/tasks/logistics-sorting/unitree_human_demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            
+                <div class="metrics-grid">
+                    <div class="content-card">
+                        <h4>Evaluation Criteria: I. Time Efficiency</h4>
+                        <ul>
+                            <li>Complete most item transfer tasks within the specified time.</li>
+                            <li>Minimum time required to complete a single item transfer</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h4>Evaluation Criteria: II. Quality Standard</h4>
+                        <ul>
+                            <li>Success rate of grabbing items from shelves</li>
+                            <li>Number of drops during robot transportation</li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div> <!-- End Track 1: ls -->
+            
+            <div id="lp" class="tab-pane">
+                <div class="track-header">
+                    <h3>Track 2: Logistics Packing Challenge</h3>
                     <span class="robot-badge">Robot from Galaxea</span>
                 </div>
 
                 <div class="track-overview">
-                    <p>This challenge simulates a real-world automated packing scenario where the robot needs to
+                    <p>This challenge focuses purely on stationary packing. It simulates a clean packing scenario where the robot needs to
                         efficiently transfer items from a moving conveyor system to designated packing containers.
                         The task involves picking items from 10 moving bins on a conveyor belt and organizing them
                         in a target packing bin.</p>
@@ -131,23 +207,23 @@
                             <p>Uses cardboard box with additional box closure requirement</p>
                         </div>
                     </div>
-                    </div>
+                </div>
                     
-                    <div class="metrics-grid">
-                        <div class="content-card">
-                            <h4>Time Efficiency</h4>
-                            <ul>
+                <div class="metrics-grid">
+                    <div class="content-card">
+                        <h4>Time Efficiency</h4>
+                        <ul>
                             <li>Total picking time (cumulative for 10 items)</li>
                             <li>Total packing time (cumulative for 10 placements)</li>
-                            </ul>
+                        </ul>
                     </div>
                     <div class="content-card">
                         <h4>Quality Standards</h4>
                         <ul>
                             <li>Items stacked tightly and neatly, not exceeding bin height</li>
                             <li>For advanced version, cardboard box must be properly sealed</li>
-                            </ul>
-                            </div>
+                        </ul>
+                        </div>
                 </div>
                 
                 <div class="content-card">
@@ -157,11 +233,11 @@
                         <img src="img/tasks/logistics-packing/ex2.jpg" alt="Test Scene 2">
                     </div>
                 </div>
-                </div>
+            </div> <!-- End Track 2: lp -->
 
             <div id="le" class="tab-pane">
                 <div class="track-header">
-                    <h3>Track 2: Life Science R&D - Lab Experiments</h3>
+                    <h3>Track 3: Life Science R&D - Lab Experiments</h3>
                     <span class="robot-badge">Robot from AgileX Robotics</span>
                 </div>
 
@@ -193,7 +269,7 @@
                             <li>Transfer tubes from random arrangement to organized grid</li>
                             <li>Fill all 30 positions precisely and systematically</li>
                             <li>Arrange glass tubes in 5×6 grid on Rack A</li>
-                            </ul>
+                        </ul>
                     </div>
 
                     <div class="content-card">
@@ -205,18 +281,18 @@
                             <img src="img/tasks/lab-experiment/3-3.jpg" alt="Liquid Disposal">
                             <p>Precisely pour remaining samples into waste container</p>
                         </div>
-                        </div>
-                        </div>
+                    </div>
+                    </div>
                         
-                        <div class="metrics-grid">
-                            <div class="content-card">
-                                <h4>Technical Precision</h4>
+                <div class="metrics-grid">
+                    <div class="content-card">
+                        <h4>Technical Precision</h4>
                         <ul>
                             <li>Column alignment and tightening accuracy</li>
                             <li>Tube arrangement precision</li>
                             <li>Sample selection accuracy</li>
                             <li>Liquid handling control</li>
-                            </ul>
+                        </ul>
                     </div>
                     <div class="content-card">
                         <h4>Operational Efficiency</h4>
@@ -225,14 +301,14 @@
                             <li>Success rate per subtask</li>
                             <li>Error-free execution</li>
                             <li>System reliability</li>
-                            </ul>
+                        </ul>
                     </div>
-                    </div>
-            </div>
+                </div>
+            </div> <!-- End Track 3: le -->
 
             <div id="dm" class="tab-pane">
                 <div class="track-header">
-                    <h3>Track 3: Deformable Object Manipulation</h3>
+                    <h3>Track 4: Deformable Object Manipulation</h3>
                     <span class="robot-badge">Robot from ARX</span>
                 </div>
                 
@@ -257,7 +333,7 @@
                         <h4>Fold T-shirt</h4>
                         <p>Fold the T-shirt into a neat and consistent configuration.</p>
                     </div>
-                    </div>
+                </div>
 
                 <div class="content-card">
                     <h4>Core Skills Assessed</h4>
@@ -266,61 +342,17 @@
                         <li>Compliant grasping and manipulation</li>
                         <li>Control of object deformation and alignment</li>
                         <li>Consistency and quality of the final folded result</li>
-                        </ul>
-                        </div>
-                        </div>
-                        </div>
-                        
-                        <!-- Evaluation Section -->
-                        <div class="evaluation-section" style="margin-top: 40px;">
-                            <h3 class="text-center mb-4">Evaluation & Scoring System</h3>
-                        
-                            <div class="content-card">
-                                <h4>Virtual Budget Allocation</h4>
-                                <p>Each team receives a fixed budget in virtual dollars. Data collection costs vary based on
-                                    teleoperation method, assuming robots are provided at no cost.</p>
-                        
-                                <div class="content-grid">
-                                    <div class="content-card">
-                                        <strong>In-Person Control</strong>
-                                        <p>Side-by-side operation, full information access</p>
-                                        <span class="rate-badge high">High Rate</span>
-                                    </div>
-                        
-                                    <div class="content-card">
-                                        <strong>Close-Distance Control</strong>
-                                        <p>Onboard sensors only, minimal latency</p>
-                                        <span class="rate-badge medium">Medium Rate</span>
-                                    </div>
-                        
-                                    <div class="content-card">
-                                        <strong>Remote Control</strong>
-                                        <p>Onboard sensors, high latency, connection issues</p>
-                                        <span class="rate-badge low">Low Rate</span>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div class="content-grid" style="margin-top: 20px;">
-                                <div class="content-card">
-                                    <h4>Teleoperation Performance</h4>
-                                    <p>Quality and speed vs. human baseline</p>
-                                </div>
-                        
-                                <div class="content-card">
-                                    <h4>Learning Capability</h4>
-                                    <p>Data collection efficiency and model performance</p>
-                                </div>
-                            </div>
-                        </div>
+                    </ul>
+                    </div>
+            </div> <!-- End Track 4: dm -->
+            </div>
         </div>
-
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const tabLinks = document.querySelectorAll('.tab-link');
                 const tabPanes = document.querySelectorAll('.tab-pane');
-                const validTabs = ['lp', 'le', 'dm'];
+                const validTabs = ['ls', 'lp', 'le', 'dm'];
 
                 // Function to activate a tab
                 function activateTab(tabId) {

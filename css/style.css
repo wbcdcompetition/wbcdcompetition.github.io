@@ -2092,6 +2092,17 @@ p {
   margin: 0.5rem 0;
 }
 
+.highlight-note {
+  font-family: "Poppins", "Raleway", "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #1f6feb;
+  background: #eaf2ff;
+  border: 1px solid #c7ddff;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
 ul {
   margin: 0.5rem 0;
   padding-left: 1.2rem;

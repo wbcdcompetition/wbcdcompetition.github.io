@@ -2060,6 +2060,31 @@ h4 {
   border: 1px solid #e9ecef;
 }
 
+.step-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-card .step-images {
+  margin-top: auto;
+}
+
+.step-images {
+  margin-top: 0.75rem;
+}
+
+.step-images img,
+.step-images video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.media-card .step-images {
+  margin-top: 0;
+}
+
 p {
   font-size: 0.9rem;
   line-height: 1.5;

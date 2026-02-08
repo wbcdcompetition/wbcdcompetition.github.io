@@ -3492,7 +3492,7 @@ body.competition-page {
 /* Responsive */
 @media (max-width: 768px) {
   .sponsor-logos {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(5, minmax(140px, 1fr));
     gap: 30px;
   }
   

@@ -2256,8 +2256,8 @@ img {
 }
 
 /* Track Background Images */
-.inline-list a[data-tab="ls"] {
-  background-image: url("../img/tasks/track-covers/logistics_sorting.jpeg");
+.inline-list a[data-tab="lpi"] {
+  background-image: url("../img/tasks/track-covers/logistics_picking.jpeg");
 }
 .inline-list a[data-tab="lp"] {
   background-image: url("../img/tasks/track-covers/logistics.png");

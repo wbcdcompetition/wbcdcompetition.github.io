@@ -47,7 +47,7 @@
                     <li class="dropdown"><a href="competition-tracks.html"><span>Competition</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="competition-tracks.html#ls">LOGISTICS SORTING</a></li>
+                            <li><a href="competition-tracks.html#lpi">LOGISTICS PICKING</a></li>
                             <li><a href="competition-tracks.html#lp">LOGISTICS PACKING</a></li>
                             <li><a href="competition-tracks.html#le">LAB EXPERIMENT</a></li>
                             <li><a href="competition-tracks.html#dm">DEFORMABLE MANIPULATION</a></li>
@@ -74,8 +74,8 @@
         <div class="tab-nav">
             <ul class="inline-list">
                 <li class="margin-btm-0">
-                    <a href="#" class="text-light-black w-300 tab-link active-challenge" data-tab="ls">
-                        <span><i class="fa fa-sort"></i>Track 1#: LOGISTICS SORTING</span>
+                    <a href="#" class="text-light-black w-300 tab-link active-challenge" data-tab="lpi">
+                        <span><i class="fa fa-hand-holding-box"></i>Track 1#: LOGISTICS PICKING</span>
                     </a>
                     </li>
                     <li class="margin-btm-0">
@@ -97,9 +97,9 @@
         </div>
 
         <div class="tab-content">
-            <div id="ls" class="tab-pane active">
+            <div id="lpi" class="tab-pane active">
                 <div class="track-header">
-                    <h3>Track 1: Logistics Sorting</h3>
+                    <h3>Track 1: Logistics Picking</h3>
                     <span class="robot-badge">Robot from Unitree</span>
                 </div>
 
@@ -108,7 +108,7 @@
                     <p class="highlight-note">Teleop real robot video from Unitree—bring your best and do even better!</p>
                     <div class="video-container">
                         <video width="100%" height="auto" controls>
-                            <source src="img/tasks/logistics-sorting/unitree_robot_demo.mp4" type="video/mp4">
+                            <source src="img/tasks/logistics-picking/unitree_robot_demo.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -128,7 +128,7 @@
             
                 <div class="content-grid">
                 <div class="content-card step-card">
-                        <h4>Task: Sorting in Logistics Scenarios</h4>
+                        <h4>Task: Picking in Logistics Scenarios</h4>
                         <p>This challenge simulates a logistics scenario where robots must transfer items from high shelves (Robot
                             in upright position), low shelves (Robot in bent position), and ground shelves (Robot in crouched
                             position) to a transport vehicle in the unloading area within a fixed time limit. There is no limit
@@ -139,7 +139,7 @@
                     <div class="version-content">
                         <strong>Robot Configuration: Unitree G1</strong>
                         <div class="version-image">
-                            <img src="img/tasks/logistics-sorting/g1.jpg" alt="Unitree G1" class="box-image">
+                            <img src="img/tasks/logistics-picking/g1.jpg" alt="Unitree G1" class="box-image">
                         </div>
                         <p><strong>End effectors:</strong> A pair of end effectors (clamps, three-finger or five-finger dexterous
                             hands)</p>
@@ -152,7 +152,7 @@
                     <p>Sample task execution by a human operator for demonstration purposes.</p>
                     <div class="video-container">
                         <video width="100%" height="auto" controls>
-                            <source src="img/tasks/logistics-sorting/unitree_human_demo.mp4" type="video/mp4">
+                            <source src="img/tasks/logistics-picking/unitree_human_demo.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -175,7 +175,7 @@
                     </div>
                 </div>
             
-            </div> <!-- End Track 1: ls -->
+            </div> <!-- End Track 1: lpi -->
             
             <div id="lp" class="tab-pane">
                 <div class="track-header">
@@ -374,7 +374,7 @@
             document.addEventListener('DOMContentLoaded', function () {
                 const tabLinks = document.querySelectorAll('.tab-link');
                 const tabPanes = document.querySelectorAll('.tab-pane');
-                const validTabs = ['ls', 'lp', 'le', 'dm'];
+                const validTabs = ['lpi', 'lp', 'le', 'dm'];
 
                 // Function to activate a tab
                 function activateTab(tabId) {
